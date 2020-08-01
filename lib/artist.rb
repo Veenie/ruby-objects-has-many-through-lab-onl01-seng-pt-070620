@@ -12,7 +12,15 @@ class Artist
     @@all
   end
   
-  def new_song
+  def new_song(name)
+    
+  def songs  
+    Meal.all.select do |meal|
+      meal.customer == self
+    end
+  end
+  
+  def genres
     
  
 end
