@@ -12,8 +12,8 @@ class Doctor
     @@all
   end
   
-  def new_appointment(name, genre)
-    Appointment.new(name, self, genre)
+  def new_appointment(name, patient)
+    Appointment.new(name, self, patient)
   end  
     
   def appointments  
@@ -22,9 +22,9 @@ class Doctor
     end
   end
   
-  def genres
+  def patients
     appointments.map do |appointment|
-      appointment.genre
+      appointment.patient
     end  
   end
  
