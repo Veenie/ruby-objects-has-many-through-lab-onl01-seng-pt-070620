@@ -1,4 +1,4 @@
-class Artist
+class Doctor
   attr_accessor :name
  
   @@all = []
@@ -18,7 +18,7 @@ class Artist
     
   def songs  
     Song.all.select do |song|
-      song.artist == self
+      song.doctor == self
     end
   end
   
