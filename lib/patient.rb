@@ -22,9 +22,9 @@ class Patient
     end
   end
   
-  def artists
+  def doctors
     appointments.map do |appointment|
-      appointment.artist
+      appointment.doctor
     end  
   end
  
