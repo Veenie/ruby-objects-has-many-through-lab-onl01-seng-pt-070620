@@ -1,4 +1,4 @@
-class Genre
+class Patient
   attr_accessor :name
  
   @@all = []
@@ -12,13 +12,13 @@ class Genre
     @@all
   end
   
-  def new_song(name, genre)
-    Song.new(name, self, genre)
+  def new_song(name, patient)
+    Song.new(name, self, patient)
   end  
     
   def songs  
     Song.all.select do |song|
-      song.genre == self
+      song.patient == self
     end
   end
   
